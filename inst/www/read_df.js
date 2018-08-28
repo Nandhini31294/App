@@ -7,7 +7,7 @@ $(document).ready(function(){
     $("#submitbutton").attr("disabled", "disabled");        
 
     //perform the request
-    var req = ocpu.call("read_csv", {
+    var req = ocpu.rpc("read_csv", {
       file : filename
     }, function(session){
       //on success call printsummary()
