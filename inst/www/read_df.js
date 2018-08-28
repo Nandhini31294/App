@@ -8,8 +8,10 @@ $(document).ready(function(){
 
     //perform the request
     var req = ocpu.rpc("read_csv", {
-      file : filename
-    }, function(session){
+      filename : filename
+	}, function(output){
+	$("#output").text(output);
+    //}, function(session){
       //on success call printsummary()
       printsummary(session);
     });
