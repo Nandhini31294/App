@@ -519,4 +519,5 @@ Highcharts.chart('dose', {
           }
       }
   }]
+ 
 });

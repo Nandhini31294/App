@@ -30,10 +30,25 @@
 	  color:black;
 	  background-color : white;
     }
+     #plotdiv {
+       position: relative;
+       width: 600px;
+       height: 400px;
+       border: solid gray 1px;
+     }
+	      #plotdiv1 {
+       position: relative;
+       width: 400px;
+       height: 400px;
+       border: solid gray 1px;
+     }
     </style>
 						<script src="opencpu/jquery-1.10.2.min.js"></script>
 						<script src="opencpu/opencpu-0.5.js"></script>
+						<script src="variable_profiling_df.js"></script>
 						<script src="read_df.js"></script>
+						<script src="zingchart.min.js"></script>
+						
 </head>
 
 <body>
@@ -157,21 +172,34 @@
                       <li class="l-section section">
                         <div class="work">
                           <h2>Variable Profiling</h2>
-
-                          <div class="select-options">
-                            <select>
-                              <option>options 01</option>
-                              <option>options 01</option>
-                              <option>options 01</option>
-                              <option>options 01</option>
-                              <option>options 01</option>
-                              <option>options 01</option>
-                            </select>
-                          </div>
+							
+							<body id="addOption_list";>
+								<FORM name="drop_list" action="yourpage.php" >
+										
+								<SELECT id="DropList" NAME="DropList" >
+								<Option value="" >Variables</option>
+								</SELECT>
+								</form>
 
                           <div class="radio-list-wrapper">
-                            <div id="dose" style="width:100%"></div>
-                            <div id="variable-profiling" style="width:100%"></div>
+                            <!--<div id="dose" style="width:100%"></div>-->
+							 
+							<div id="plotdiv"></div>
+						
+						<div id="plotdiv1"></div>
+						<!--	<div id="myChart">
+						  
+						  <select id="chart-selector" name="chart-selector">
+							
+							<option value="">Please Select An Option</option>
+							<option value="0">0</option>
+							<option value="1">1</option>
+							
+						  </select>
+						  
+						</div>
+						
+                            <div id="variable-profiling" style="width:100%"></div>-->
                           </div>
 
 
